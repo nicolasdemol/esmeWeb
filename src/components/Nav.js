@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import logo from '../assets/images/sudrihack.png';
+
 class Nav extends Component {
     render() {
         return (
             <nav className="flex items-center justify-around flex-wrap bg-white shadow-md">
                 <Logo />
+                <Searchbar />
                 <Links />
             </nav>
         );
@@ -23,16 +24,16 @@ class Links extends Component {
     render() {
         return (
             <div className="static -mb-px flex">
-                    <a className="no-underline text-teal-dark border-b-2 border-teal-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    <a className="no-underline text-teal-dark border-b-2 border-teal-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" href="https://sudrihack.com">
                         Accueil
                     </a>
-                    <a className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    <a className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="https://sudrihack.com">
                         Projets
                     </a>
-                    <a className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    <a className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="https://sudrihack.com">
                         Partenaires
                     </a>
-                    <a className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3" href="#">
+                    <a className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3" href="https://sudrihack.com">
                         Équipe
                     </a>
             </div>
