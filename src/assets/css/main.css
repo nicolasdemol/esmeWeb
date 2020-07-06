@@ -578,6 +578,22 @@ video {
   height: auto;
 }
 
+@font-face {
+  font-family: 'NothingYouCouldDo' ;
+
+  font-weight: 400;
+
+  src: url(../fonts/NothingYouCouldDo-Regular.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: 'IndieFlower' ;
+
+  font-weight: 400;
+
+  src: url(../fonts/IndieFlower-Regular.ttf) format("ttf");
+}
+
 .container {
   width: 100%;
 }
