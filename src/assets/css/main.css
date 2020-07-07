@@ -579,17 +579,17 @@ video {
 }
 
 @font-face {
-  font-family: 'NothingYouCouldDo' ;
+  font-family: 'NothingYouCouldDo';
 
-  font-weight: 400;
+  font-weight: 500;
 
   src: url(../fonts/NothingYouCouldDo-Regular.ttf) format("ttf");
 }
 
 @font-face {
-  font-family: 'IndieFlower' ;
+  font-family: 'IndieFlower';
 
-  font-weight: 400;
+  font-weight: 500;
 
   src: url(../fonts/IndieFlower-Regular.ttf) format("ttf");
 }
