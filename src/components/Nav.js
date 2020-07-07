@@ -29,8 +29,8 @@ class Links extends Component {
             <nav className="flex items-center space-x-10">
                 <ul className="flex flex-wrap justify-between text-gray-400 nav-links font-bold text-xl space-x-2 sm:space-x-8 ">
                     <li className="hover:text-indigo-500"><Link to={"/"} >Accueil</Link></li>
-                    <li className="hover:text-indigo-500"><Link to={"/"} >Projets</Link></li>
-                    <li className="hover:text-indigo-500"><Link to={"/"} >Partenaires</Link></li>
+                    <li className="hover:text-indigo-500"><Link to={"/projects"} >Projets</Link></li>
+                    <li className="hover:text-indigo-500"><Link to={"/partners"} >Partenaires</Link></li>
                 </ul>
                 <Signbutton />
             </nav>
