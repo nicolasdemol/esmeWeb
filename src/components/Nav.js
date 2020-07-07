@@ -17,7 +17,7 @@ class Logo extends Component {
     render() {
         return (
             <div className="flex px-10">
-                <Link to={"/"}><span className="logo-name font-bold text-indigo-700 antialiased text-3xl">Sudrihack</span></Link>
+                <Link to={"/"}><span className="logo-name font-bold text-indigo-500 antialiased text-3xl">Sudrihack</span></Link>
             </div>
         );
     }
