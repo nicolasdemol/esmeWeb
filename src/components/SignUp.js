@@ -29,18 +29,20 @@ class SignUpForm extends Component {
     }
     
     onSubmit = event => {
+        event.preventDefault()
+        
         const { firstname, lastname, email, password } = this.state;
-     
+        
         this.props.firebase
-          .doCreateUserWithEmailAndPassword(email, password)
-          .then(authUser => {
+        .doCreateUserWithEmailAndPassword(email, password)
+        .then(authUser => {
             this.setState({ INITIAL_STATE });
-          })
-          .catch(error => {
+        })
+        .catch(error => {
             this.setState({ error });
-          });
-     
-        event.preventDefault();
+            console.log(error)
+        });
+        
     };
 
     onChange = event => {
@@ -56,7 +58,7 @@ class SignUpForm extends Component {
             error,
           } = this.state;
 
-        const isInvalid = firstname === '' || lastname === '' || email === '' || password === '';
+        let isInvalid = firstname === '' || lastname === '' || email === '' || password === '';
 
         return (
             <form onSubmit={this.onSubmit} className="w-full max-w-lg my-20 p-10 shadow-md">
@@ -86,10 +88,10 @@ class SignUpForm extends Component {
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full px-3">
-                    <label name="password" value={password} onChange={this.onChange} className="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">
+                    <label className="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">
                         Mot de passe
                     </label>
-                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************" />
+                    <input name="password" value={password} onChange={this.onChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************" />
                     <p className="text-gray-600 text-xs italic">Faîtes au plus long que vous pouvez.</p>
                     </div>
                 </div>
