@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
 .logo-name {
-    font-family: 'NothingYouCouldDo' ;
+    font-family: 'Nothing You Could Do' ;
 }
 
 .nav-links {
-    font-family: 'IndieFlower';
+    font-family: 'Indie Flower';
 }
+
+

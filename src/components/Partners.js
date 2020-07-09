@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import  { FirebaseContext } from '../Firebase';
 
-class Partners extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Partners</h1>
-            </div>
-        );
-    }
-}
+const Partners = () => (
+    <FirebaseContext.Consumer>
+      {firebase => {
+        return <div>I've access to Firebase and render something.</div>;
+      }}
+    </FirebaseContext.Consumer>
+  );
+
 
 export default Partners;
