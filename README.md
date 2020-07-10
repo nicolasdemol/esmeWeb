@@ -2,10 +2,9 @@
 ## Étapes a suivre lors de l'initialisation
 ### Dans le répertoire racine, vous devez installez les dépendances de notre serveur :
 `yarn install`
-`npm install`
 
-## Si vous ne pouvez pas effectuer une de ces commandes :
-Il se peut que vous n'ayez pas encore npm ou yarn d'installé sur votre machine. Ce sont des gestionnaires de paquets indispensables au fonctionnement de notre serveur (Node). Pour cela je vous invite à les télécharger et à les installer selon votre machine. Vous devez impérativement installer NodeJs avant tout.
+## Si vous ne pouvez pas effectuer cette commande :
+Il se peut que vous n'ayez pas encore <code>yarn</code> d'installé sur votre machine. C'est un gestionnaire de paquets indispensable au bon fonctionnement de notre serveur (Node). Pour cela je vous invite à le télécharger et à l'installer selon votre machine. Vous devez impérativement installer NodeJs avant tout.
 - Sous Linux
 ```
 sudo apt-get update
@@ -24,6 +23,11 @@ brew install node
 brew install npm
 brew install yarn 
 ```
+
+## Si vous avez des erreurs lors de l'installation :
+- Vérifiez à ce que nodejs soit à jour
+- Vérifiez à ce que yarn soit à jour et que vous n'avez pas utiliser npm (il ne doit pas y avoir de fichier package-lock.json, mais uniquement yarn.lock)
+
 ## Pour développer plus rapidement l'interface
 Le serveur contient un système de hot-reload qui permet de recharger la page a chaque sauvegarde de fichier dans le projet, ce qui permet un cycle de développement plus rapide.
 
