@@ -8,7 +8,7 @@ import * as ROUTES from '../constants/routes';
 class Nav extends Component {
     render() {
         return (
-            <div className="flex flex-col flex-wrap items-center justify-between lg:flex-row p-2 sm:px-20 bg-white border border-gray-200 shadow-md">
+            <div id="header" className="fixed w-full z-30 top-0 flex flex-col flex-wrap items-center justify-between lg:flex-row p-2 sm:px-20 bg-white border border-gray-200 shadow-md">
                 <Logo />
                 <div className="flex flex-col-reverse justify-center space-x-0 md:space-x-4 lg:space-x-10 md:flex-row">
                     <Links />
@@ -32,7 +32,7 @@ class Logo extends Component {
 class Links extends Component {
     render() {
         return (
-            <div className="flex items-center">
+            <div id="nav-toggle" className="flex items-center">
                 <button type="button" className="hidden block text-gray-500 hover:text-white">
                     <svg class="svg-icon" viewBox="0 0 20 20">
 							<path fill="none" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314
@@ -56,7 +56,7 @@ class Signbutton extends Component {
     render() {
         return (
             <div className="flex inline-flex justify-center my-2">
-                <button className="bg-indigo-400 hover:bg-indigo-500 text-white p-2 rounded-l">
+                <button id="navAction" className="bg-indigo-400 hover:bg-indigo-500 text-white p-2 rounded-l">
                     <Link to={ROUTES.SIGN_IN}>Se connecter</Link>
                 </button>
                 <button className="bg-gray-300 hover:bg-gray-400 text-gray-600 p-2 rounded-r">

@@ -59,7 +59,8 @@ class SignUpFormBase extends Component {
         let isInvalid = firstname === '' || lastname === '' || email === '' || password === '';
 
         return (
-            <form onSubmit={this.onSubmit} className="w-full max-w-lg my-2 sm:my-20 p-10 shadow-md">
+            <div className="h-screen flex justify-center items-center my-40 sm:my-0">
+            <form onSubmit={this.onSubmit} className="w-full max-w-lg p-10 shadow-md">
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label className="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2" >
@@ -100,6 +101,7 @@ class SignUpFormBase extends Component {
                         {error && <p>{error.message}</p>}
                 </div>
             </form>
+            </div>
         );
     }
 }
