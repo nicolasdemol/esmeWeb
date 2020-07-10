@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { compose } from 'recompose';
 
-import { FirebaseContext } from '../Firebase';
+import { withFirebase } from '../Firebase';
 import * as ROUTES from '../constants/routes';
 
 const SignUp = () => (
-    
     <div className="flex justify-center">
-        <FirebaseContext.Consumer>
-            {firebase => <SignUpForm firebase={firebase} />}
-        </FirebaseContext.Consumer>
+        <SignUpForm />
     </div>
 );
 
@@ -21,26 +19,26 @@ const INITIAL_STATE = {
     error: null,
 };
 
-class SignUpForm extends Component {
+class SignUpFormBase extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { INITIAL_STATE };
+        this.state = { ...INITIAL_STATE };
     }
     
     onSubmit = event => {
         event.preventDefault()
         
-        const { firstname, lastname, email, password } = this.state;
+        const { email, password } = this.state;
         
         this.props.firebase
         .doCreateUserWithEmailAndPassword(email, password)
         .then(authUser => {
-            this.setState({ INITIAL_STATE });
+            this.setState({ ...INITIAL_STATE });
+            this.props.history.push(ROUTES.HOME);
         })
         .catch(error => {
             this.setState({ error });
-            console.log(error)
         });
         
     };
@@ -61,7 +59,7 @@ class SignUpForm extends Component {
         let isInvalid = firstname === '' || lastname === '' || email === '' || password === '';
 
         return (
-            <form onSubmit={this.onSubmit} className="w-full max-w-lg my-20 p-10 shadow-md">
+            <form onSubmit={this.onSubmit} className="w-full max-w-lg my-2 sm:my-20 p-10 shadow-md">
                 <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label className="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2" >
@@ -107,11 +105,15 @@ class SignUpForm extends Component {
 }
 
 const SignUpLink = () => (
-    <p>
-        Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+    <p className="text-center text-gray-500 text-xs">
+        Vous n'avez pas encore de compte ? <Link className="underline" to={ROUTES.SIGN_UP}>S'inscrire</Link>
     </p>
 );
- 
+
+const SignUpForm = compose(
+    withRouter,
+    withFirebase,
+    )(SignUpFormBase); 
 
 export default SignUp;
 export { SignUpForm , SignUpLink };

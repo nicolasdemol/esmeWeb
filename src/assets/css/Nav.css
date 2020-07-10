@@ -9,3 +9,18 @@
 .nav-links {
     font-family: 'Indie Flower';
 }
+.svg-icon {
+    width: 2em;
+    height: 2em;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: #7F9CF5;
+  }
+  
+  .svg-icon circle {
+    stroke: #7F9CF5;
+    stroke-width: 1;
+  }
