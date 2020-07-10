@@ -1,6 +1,6 @@
 {
   "name": "SudriApp",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -39,8 +39,6 @@
   "devDependencies": {
     "autoprefixer": "^9.8.4",
     "postcss-cli": "^7.1.1",
-    "react-router-dom": "^5.2.0",
-    "tailwindcss": "^1.4.6",
-    "recompose": "^0.30.0"
+    "tailwindcss": "^1.4.6"
   }
 }
