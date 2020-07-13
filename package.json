@@ -12,7 +12,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "recompose": "^0.30.0",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "postcss-cli": "^7.1.1"
   },
   "scripts": {
     "start": "npm run watch:css && PORT=8080 react-scripts start",
@@ -38,7 +39,6 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.4",
-    "postcss-cli": "^7.1.1"
+    "autoprefixer": "^9.8.4"
   }
 }
