@@ -1,6 +1,6 @@
 {
-  "name": "SudriApp",
-  "version": "0.1.7",
+  "name": "esmeWeb",
+  "version": "0.1.8",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -11,7 +11,8 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "recompose": "^0.30.0"
+    "recompose": "^0.30.0",
+    "tailwindcss": "^1.4.6"
   },
   "scripts": {
     "start": "npm run watch:css && PORT=8080 react-scripts start",
@@ -38,7 +39,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.4",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.4.6"
+    "postcss-cli": "^7.1.1"
   }
 }
