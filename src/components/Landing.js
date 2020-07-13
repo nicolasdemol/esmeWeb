@@ -3,7 +3,7 @@ import hero from '../assets/images/hero.png';
 
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
-import logo from '../assets/images/favicon4.png';
+import logo from '../assets/images/favicon.png';
 
 class Landing extends Component {
     render() {
