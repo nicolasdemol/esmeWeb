@@ -52,9 +52,9 @@ class Logo extends Component {
     render() {
         return (
             <Link to={ROUTES.LANDING}>
-                <div className="flex flex-wrap justify-between space-x-4 px-10">
+                <div className="flex flex-wrap -mb-1 justify-between space-x-4 px-10">
                         <img className="h-10 w-8" src={logo} alt="logo" />
-                        <span className="logo-name font-bold text-white antialiased text-3xl">Sudrihack</span>
+                        <span className="logo-name  font-bold text-white antialiased text-3xl">Sudrihack</span>
                 </div>
             </Link>
         );
