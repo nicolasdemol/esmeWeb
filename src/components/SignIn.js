@@ -13,6 +13,7 @@ const SignIn = () => (
     </div>
 );
 
+
 const INITIAL_STATE = {
     email: '',
     password: '',
@@ -52,7 +53,7 @@ class SignInFormBase extends Component {
         let isInvalid = password === '' || email === '';        
         return (
             <section className="w-full h-screen">
-                <div className="flex justify-center h-full items-center my-10 sm:my-0">
+                <div className="flex justify-center h-full items-center my-10 sm:my-0" >
                 <div className=" container max-w-xs">
                     <form onSubmit={this.onSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <div className="mb-4">

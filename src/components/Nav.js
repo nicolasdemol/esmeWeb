@@ -16,7 +16,7 @@ class Nav extends Component {
     }
     componentDidMount() {
         document.addEventListener('scroll', () => {
-            const isTop = window.scrollY > 20;
+            const isTop = window.scrollY > 5;
             if (isTop !== this.state.isTop) {
                 this.setState({ isTop })
             }
@@ -30,7 +30,7 @@ class Nav extends Component {
     render() {
         console.log(this.state.isTop)
         return (
-            <div className={`${this.state.isTop ? 'shadow-lg' : ''} ${"fixed w-full z-30 top-0 flex flex-col flex-wrap items-center justify-between lg:flex-row p-2 sm:px-20 bg-blue-900 border border-blue-900"}`}>
+            <div className={`${this.state.isTop ? 'shadow-xl' : ''} ${"fixed w-full z-30 top-0 flex flex-col flex-wrap items-center justify-between lg:flex-row p-2 sm:px-20 bg-blue-900 border border-blue-900"}`}>
                 <div className="flex items-center">
                     <Logo /> 
                     <button type="button" onClick={this.handlerClick.bind(this)} className="block md:hidden focus:outline-none">
