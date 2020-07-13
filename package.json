@@ -13,11 +13,12 @@
     "react-scripts": "3.4.1",
     "recompose": "^0.30.0",
     "tailwindcss": "^1.4.6",
-    "postcss-cli": "^7.1.1"
+    "postcss-cli": "^7.1.1",
+    "autoprefixer": "^9.8.4"
   },
   "scripts": {
-    "start": "npm run watch:css && PORT=8080 react-scripts start",
-    "build": "npm run build:css && PORT=8080 react-scripts build",
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css",
@@ -39,6 +40,5 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.4"
   }
 }
