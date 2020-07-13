@@ -1,13 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
 
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2');
 
 .logo-name {
     font-family: 'Nothing You Could Do' ;
 }
 
+.navbutton {
+  visibility: hidden;
+}
+.navClose {
+  display: none;
+}
+.navOpen {
+  display: block;
+}
+
 .nav-links {
-    font-family: 'Indie Flower';
+  font-family: 'Baloo Da 2', sans-serif;
+}
+
+.section-title {
+    font-family: 'Baloo Da 2', sans-serif;
 }
 .svg-icon {
     width: 2em;
@@ -17,14 +32,14 @@
   .svg-icon path,
   .svg-icon polygon,
   .svg-icon rect {
-    fill: #7F9CF5;
+    fill: #fff;
   }
   
   .svg-icon circle {
-    stroke: #7F9CF5;
+    stroke: #fff;
     stroke-width: 1;
   }
 
   .gradient {
-    background: linear-gradient(90deg, #7F9CF5 0%, #6e74cc 100%);
+    background: linear-gradient(90deg, #2B4364 0%, #2B4364 100%);
 }
