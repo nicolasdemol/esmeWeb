@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
-import logo from '../assets/images/favicon3.png';
+import logo from '../assets/images/favicon.png';
 
 class Landing extends Component {
     render() {

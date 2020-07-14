@@ -11,18 +11,15 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "recompose": "^0.30.0",
-    "tailwindcss": "^1.4.6",
-    "postcss-cli": "^7.1.1",
-    "autoprefixer": "^9.8.4"
+    "recompose": "^0.30.0"
   },
   "scripts": {
     "start": "npm run watch:css && react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css",
-    "watch:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css"
+    "watch:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css",
+    "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +37,8 @@
     ]
   },
   "devDependencies": {
+    "tailwindcss": "^1.4.6",
+    "postcss-cli": "^7.1.1",
+    "autoprefixer": "^9.8.4"
   }
 }

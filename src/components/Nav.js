@@ -96,7 +96,7 @@ class Signbutton extends Component {
         return (
             <div className="block inline-flex justify-center nav-links">
                 <Link to={ROUTES.SIGN_IN}>
-                    <button className="transition ease-in-out duration-300 bg-teal-400 font-bold hover:bg-white text-md text-blue-900 p-2 rounded-l focus:outline-none">
+                    <button className="transition ease-in-out duration-300 bg-teal-400 font-bold hover:bg-gray-400 text-md text-blue-900 p-2 rounded-l focus:outline-none">
                         Se connecter
                     </button>
                 </Link>
