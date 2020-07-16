@@ -83,9 +83,6 @@ class Navbutton extends Component {
 }
 
 class Links extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div id="nav-toggle" className="flex items-center">
