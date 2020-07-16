@@ -33,14 +33,14 @@ class NavAuth extends Component {
     render() {
         console.log(this.state.isTop)
         return (
-            <div className={`${this.state.isTop ? 'shadow-xl' : ''} ${"fixed w-full z-30 top-0 flex flex-col flex-wrap items-center justify-between lg:flex-row p-2 sm:px-20 bg-blue-900 border border-blue-900"}`}>
+            <div className={`${this.state.isTop ? 'shadow-xl' : ''} ${"transform transition-all ease-in-out duration-300 fixed w-full z-30 top-0 flex flex-col flex-wrap items-center justify-between lg:flex-row p-2 sm:px-20 bg-blue-900 border border-blue-900"}`}>
                 <div className="flex items-center">
                     <Logo /> 
                     <button type="button" onClick={this.handlerClick.bind(this)} className="block md:hidden focus:outline-none">
                         <Navbutton />
                     </button>
                 </div>
-                <div className={ this.state.isActive ? "block md:block" : "hidden md:block"}>
+                <div className={this.state.isActive ? "-translate-y-0 block md:block" : "translate-y-full hidden md:block"} >
                     <div className="flex flex-col-reverse justify-center space-x-0 md:space-x-4 lg:space-x-10 md:flex-row md:mt-0 mt-2">
                         <LinksAuth />
                         <Link to={ROUTES.LANDING}>
