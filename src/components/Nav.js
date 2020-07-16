@@ -3,10 +3,13 @@ import '../assets/css/Nav.css'
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
 import logo from "../assets/images/favicon.png";
+import SignOutButton from './SignOut';
 
+const Nav = ({ authUser }) => (
+    <div>{authUser ? <NavAuth /> : <NavNonAuth />}</div>
+);
 
-
-class Nav extends Component {
+class NavAuth extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,7 +41,54 @@ class Nav extends Component {
                     </button>
                 </div>
                 <div className={ this.state.isActive ? "block md:block" : "hidden md:block"}>
-                    <div className="flex flex-col-reverse justify-center space-x-0 md:space-x-4 lg:space-x-10 md:flex-row">
+                    <div className="flex flex-col-reverse justify-center space-x-0 md:space-x-4 lg:space-x-10 md:flex-row md:mt-0 mt-2">
+                        <LinksAuth />
+                        <Link to={ROUTES.LANDING}>
+                            <div className="block inline-flex justify-center nav-links">
+                                <SignOutButton />
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+
+class NavNonAuth extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isActive: false,
+            isTop: false
+        }
+    }
+    componentDidMount() {
+        document.addEventListener('scroll', () => {
+            const isTop = window.scrollY > 5;
+            if (isTop !== this.state.isTop) {
+                this.setState({ isTop })
+            }
+        })
+    }
+
+    handlerClick() {
+        this.setState({isActive: !this.state.isActive})
+    }
+
+    render() {
+        console.log(this.state.isTop)
+        return (
+            <div className={`${this.state.isTop ? 'shadow-xl' : ''} ${"fixed w-full z-30 top-0 flex flex-col flex-wrap items-center justify-between lg:flex-row p-2 sm:px-20 bg-blue-900 border border-blue-900"}`}>
+                <div className="flex items-center">
+                    <Logo /> 
+                    <button type="button" onClick={this.handlerClick.bind(this)} className="block md:hidden focus:outline-none">
+                        <Navbutton />
+                    </button>
+                </div>
+                <div className={ this.state.isActive ? "block md:block" : "hidden md:block"}>
+                    <div className="flex flex-col-reverse justify-center space-x-0 md:space-x-4 lg:space-x-10 md:flex-row md:mt-0 mt-2">
                         <Links />
                         <Signbutton />
                     </div>
@@ -82,6 +132,21 @@ class Links extends Component {
         return (
             <div id="nav-toggle" className="flex items-center">
                 <ul className="flex flex-wrap justify-between my-1 text-white nav-links text-md space-x-4 sm:space-x-10">
+                    <li className="block transition ease-in-out duration-300 hover:text-teal-400"><Link to={ROUTES.LANDING} >Accueil</Link></li>
+                    <li className="block transition ease-in-out duration-300 hover:text-teal-400"><Link to={ROUTES.PROJECTS} >Projets</Link></li>
+                    <li className="block transition ease-in-out duration-300 hover:text-teal-400"><Link to={ROUTES.PARTNERS} >Partenaires</Link></li>
+                </ul>
+            </div>
+        );
+    }
+}
+
+class LinksAuth extends Component {
+    render() {
+        return (
+            <div id="nav-toggle" className="flex items-center">
+                <ul className="flex flex-wrap justify-between my-1 text-white nav-links text-md space-x-4 sm:space-x-10">
+                    <li className="block transition ease-in-out duration-300 hover:text-teal-400"><Link to={ROUTES.HOME} >Utilisateur</Link></li>
                     <li className="block transition ease-in-out duration-300 hover:text-teal-400"><Link to={ROUTES.LANDING} >Accueil</Link></li>
                     <li className="block transition ease-in-out duration-300 hover:text-teal-400"><Link to={ROUTES.PROJECTS} >Projets</Link></li>
                     <li className="block transition ease-in-out duration-300 hover:text-teal-400"><Link to={ROUTES.PARTNERS} >Partenaires</Link></li>
