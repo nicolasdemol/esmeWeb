@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
 import logo from "../assets/images/favicon.png";
 import SignOutButton from './SignOut';
+import rpgService from "../services/rpgService"
 
 class NavAuth extends Component {
     constructor(props) {
         super(props);
+
+        console.log(rpgService.getActionList());
+
         this.state = {
             isActive: false,
             isTop: false
