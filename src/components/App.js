@@ -17,6 +17,8 @@ import Admin from './Admin';
 import * as ROUTES from '../constants/routes';
 
 
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,6 +27,7 @@ class App extends Component {
       authUser: null
     }
   }
+
   componentDidMount() {
     this.listener = this.props.firebase.auth.onAuthStateChanged(authUser => {
       authUser
@@ -43,7 +46,7 @@ class App extends Component {
           <Nav authUser={this.state.authUser} />
           
           <Switch>
-            <Route exact path={ROUTES.LANDING} component={ Landing }/>
+            <Route exact path={ROUTES.LANDING} component={ Landing } />
             <Route path={ROUTES.PROJECTS} component={ Projects }/>
             <Route path={ROUTES.PARTNERS} component={ Partners }/>
             <Route path={ROUTES.SIGN_IN} component={ SignIn }/>

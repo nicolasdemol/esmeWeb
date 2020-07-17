@@ -36,15 +36,15 @@ class NavAuth extends Component {
                         <Navbutton />
                     </button>
                 </div>
-                <div className={`${this.state.isActive ? "h-20 md:h-auto" : "h-0 md:h-auto"} ${"flex transition-all overflow-hidden lg:overflow-visible duration-150 linear flex-wrap lg:flex-grow-0 flex-grow justify-center space-x-4 lg:space-x-10"}`}>
+                <div className={`${this.state.isActive ? "h-20 md:h-auto" : "h-0 md:h-auto"} ${"flex transition-all overflow-hidden lg:overflow-visible duration-150 linear flex-wrap lg:flex-grow-0 flex-grow justify-center"}`}>
                     <Links authUser={this.props.authUser} />
                     {!this.props.authUser
                     ?
-                        <div className="flex justify-center items-center nav-links">
+                        <div className="flex justify-center items-center nav-links mx-4">
                             <Signbutton />
                         </div>
                     :
-                            <Link to={ROUTES.LANDING} className="flex justify-center items-center nav-links">
+                            <Link to={ROUTES.LANDING} className="flex justify-center items-center nav-links mx-4">
                                 <SignOutButton />
                             </Link>
                     }
@@ -87,7 +87,7 @@ class Navbutton extends Component {
 class Links extends Component {
     render() {
         return (
-            <div id="nav-toggle" className="flex items-center">
+            <div id="nav-toggle" className="flex items-center mx-4">
                 <ul className="flex flex-wrap justify-between my-1 text-white nav-links text-md space-x-4 sm:space-x-10">
                     {this.props.authUser
                         ? <li className="block transition ease-in-out duration-300 hover:text-teal-400"><Link to={ROUTES.HOME} >Utilisateur</Link></li>
