@@ -1,19 +1,11 @@
-import react from "react"
-
-
-
 export default class rpgService {
-    constructor(uuid){
-        this.uuid = uuid
-        
+    constructor(db){
+        this.db = db
     }
 
-    static async getActionList(){
-        const snapshot = await this.db.collection("actions").get();
-        return snapshot;
-    }
+    getActionList = () => this.db.collection("actions").get();
 
-    async getActions(){
+    async getActions(uuid){
         const snapshot = await this.db.collection("points").doc(this.uuid).collection("contributions").get()
         return snapshot;
     }
