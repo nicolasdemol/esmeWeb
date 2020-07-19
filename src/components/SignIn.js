@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { SignUpLink } from "./SignUp";
-import * as ROUTES from "../constants/routes";
-import { authService } from "../services";
+import { SignUpLink } from './SignUp';
+import * as ROUTES from '../constants/routes';
+import { authService } from '../services';
 
 const SignIn = () => (
   <div>
@@ -13,9 +13,9 @@ const SignIn = () => (
 );
 
 const INITIAL_STATE = {
-  email: "",
-  password: "",
-  error: null,
+  email: '',
+  password: '',
+  error: null
 };
 
 class SignInForm extends Component {
@@ -29,7 +29,7 @@ class SignInForm extends Component {
     event.preventDefault();
 
     const { email, password } = this.state;
-
+    
     authService
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
@@ -47,7 +47,7 @@ class SignInForm extends Component {
   render() {
     const { email, password, error } = this.state;
 
-    let isInvalid = password === "" || email === "";
+    let isInvalid = password === '' || email === '';
     return (
       <section className="w-full h-screen">
         <div className="flex justify-center h-full items-center my-10 sm:my-0">
