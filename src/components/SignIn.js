@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { SignUpLink } from './SignUp';
 import * as ROUTES from '../constants/routes';
 import { authService } from '../services';
 
 const SignIn = () => (
-  <div>
     <SignInForm />
-    <SignUpLink />
-  </div>
 );
 
 const SignInForm = props => {
