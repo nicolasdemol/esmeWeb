@@ -41,7 +41,9 @@ class NavAuth extends Component {
                     <Links authUser={this.props.authUser} />
                     {!this.props.authUser
                     ?
+                        <div className="flex justify-center items-center nav-links">
                             <Signbutton />
+                        </div>
                     :
                             <Link to={ROUTES.LANDING} className="flex justify-center items-center nav-links">
                                 <SignOutButton />
@@ -104,7 +106,7 @@ class Links extends Component {
 class Signbutton extends Component {
     render() {
         return (
-            <div className="block inline-flex justify-center nav-links">
+            <div>
                 <Link to={ROUTES.SIGN_IN}>
                     <button className="transition ease-in-out duration-300 bg-teal-400 font-bold hover:bg-gray-400 text-md text-blue-900 p-2 rounded-l focus:outline-none">
                         Se connecter
