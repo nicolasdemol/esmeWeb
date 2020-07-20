@@ -18,13 +18,12 @@ import * as ROUTES from '../constants/routes';
 
 
 
-
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      authUser: null
+      authUser: null,
     }
   }
 
@@ -46,7 +45,7 @@ class App extends Component {
           <Nav authUser={this.state.authUser} />
           
           <Switch>
-            <Route exact path={ROUTES.LANDING} component={ Landing } />
+            <Route exact={true} path={ROUTES.LANDING} component={ Landing }/>
             <Route path={ROUTES.PROJECTS} component={ Projects }/>
             <Route path={ROUTES.PARTNERS} component={ Partners }/>
             <Route path={ROUTES.SIGN_IN} component={ SignIn }/>

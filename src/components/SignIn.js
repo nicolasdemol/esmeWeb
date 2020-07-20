@@ -27,7 +27,7 @@ class SignInFormBase extends Component {
         this.state = { ...INITIAL_STATE };
     }
     
-    onSubmit = event => {
+    onSubmit = (event) => {
         event.preventDefault();
         
         const { email, password } = this.state;
@@ -39,12 +39,12 @@ class SignInFormBase extends Component {
             this.props.history.push(ROUTES.HOME);
         })
         .catch(error => {
-          this.setState({ error });
+            this.setState({ error });
         });
     
     };
     
-    onChange = event => {
+    onChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
     };
     render() {
@@ -91,7 +91,7 @@ class SignInFormBase extends Component {
 const SignInForm = compose(
     withRouter,
     withFirebase,
-  )(SignInFormBase);
+)(SignInFormBase);
 
 export default SignIn;
 

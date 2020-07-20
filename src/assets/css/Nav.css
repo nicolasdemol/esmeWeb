@@ -7,16 +7,6 @@
     font-family: 'Nothing You Could Do' ;
 }
 
-.navbutton {
-  visibility: hidden;
-}
-.navClose {
-  display: none;
-}
-.navOpen {
-  display: block;
-}
-
 .nav-links {
   font-family: 'Baloo Da 2', sans-serif;
 }
