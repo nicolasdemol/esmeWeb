@@ -22,7 +22,7 @@ const NavAuth = (props) => {
     })
 
     return (
-        <div className={`${isTop ? 'shadow-xl' : ''} ${"transform fixed w-full z-30 top-0 flex flex-wrap items-center justify-between p-2 sm:px-20 bg-blue-900 border border-blue-900"}`}>
+        <div className={`${isTop ? 'shadow-xl' : ''} ${"transform transition duration-300 fixed w-full z-30 top-0 flex flex-wrap items-center justify-between p-2 sm:px-20 bg-blue-900 border border-blue-900"}`}>
             <div className="flex flex-grow justify-around lg:justify-between items-center">
                 <Logo /> 
                 <button type="button" onClick={handlerClick} className="md:hidden focus:outline-none">
@@ -77,7 +77,7 @@ const Links = (props) => {
         <div id="nav-toggle" className="flex items-center mx-4">
             <ul className="flex flex-wrap justify-between my-1 text-white nav-links text-md space-x-4 sm:space-x-10">
                 {props.authUser
-                    ? <li id="utilisateur" className="block transition ease-in-out duration-300 focus:outline-none hover:text-teal-400"><NavLink activeClassName="border-b-2 border-teal-400" to={ROUTES.HOME} >Utilisateur</NavLink></li>
+                    ? <li id="classement" className="block transition ease-in-out duration-300 focus:outline-none hover:text-teal-400"><NavLink activeClassName="border-b-2 border-teal-400" to={ROUTES.HOME} >Classement</NavLink></li>
                     :
                     <li id="accueil" className="block transition ease-in-out duration-300 focus:outline-none hover:text-teal-400"><NavLink exact={true} activeClassName="border-b-2 border-teal-400" to={ROUTES.LANDING} >Accueil</NavLink></li>
                 }

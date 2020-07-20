@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
  
-import { SignUpLink } from './SignUp';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../constants/routes';
  
 const SignIn = () => (
-    <div>
     <SignInForm />
-    <SignUpLink />
-    </div>
 );
 
 
@@ -52,7 +48,7 @@ class SignInFormBase extends Component {
 
         let isInvalid = password === '' || email === '';        
         return (
-            <section className="w-full h-screen">
+            <section className="bg-gray-200 w-full h-screen">
                 <div className="flex justify-center h-full items-center my-10 sm:my-0" >
                 <div className=" container max-w-xs">
                     <form onSubmit={this.onSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
