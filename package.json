@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "colorette": "^1.2.0",
     "firebase": "^7.15.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -37,8 +38,8 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^1.4.6",
+    "autoprefixer": "^9.8.5",
     "postcss-cli": "^7.1.1",
-    "autoprefixer": "^9.8.4"
+    "tailwindcss": "^1.4.6"
   }
 }

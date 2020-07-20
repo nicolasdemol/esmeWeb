@@ -1,11 +1,14 @@
-import React from 'react';
- 
-import { withFirebase } from '../Firebase';
- 
-const SignOutButton = ({ firebase }) => (
-  <button className="transition ease-in-out duration-300 bg-red-400 hover:bg-red-500 text-white p-2 rounded" type="button" onClick={firebase.doSignOut}>
+import React from "react";
+import { authService } from "../services";
+
+const SignOutButton = () => (
+  <button
+    className="transition ease-in-out duration-300 bg-red-400 hover:bg-red-500 text-white p-2 rounded"
+    type="button"
+    onClick={authService.doSignOut}
+  >
     Se déconnecter
   </button>
 );
- 
-export default withFirebase(SignOutButton);
+
+export default SignOutButton;

@@ -8,6 +8,7 @@ import SignOutButton from './SignOut';
 class NavAuth extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             isActive: false,
             isTop: false
