@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { SignUpLink } from './SignUp';
@@ -12,48 +12,42 @@ const SignIn = () => (
   </div>
 );
 
-const INITIAL_STATE = {
-  email: '',
-  password: '',
-  error: null
-};
+const SignInForm = props => {
+  
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState(null)
 
-class SignInForm extends Component {
-  constructor(props) {
-    super(props);
+  let isInvalid = password === '' || email === '';
 
-    this.state = { ...INITIAL_STATE };
-  }
+  const history = useHistory()
 
-  onSubmit = (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
-
-    const { email, password } = this.state;
     
     authService
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
-        this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.HOME);
+        setEmail('')
+        setPassword('')
+        setError(null)
+        history.push(ROUTES.HOME)
       })
       .catch((error) => {
-        this.setState({ error });
+        setError(error)
       });
   };
 
-  onChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-  render() {
-    const { email, password, error } = this.state;
+  const onChange = (handler,e) => {
+    handler(e.target.value)
+  }
 
-    let isInvalid = password === '' || email === '';
     return (
       <section className="w-full h-screen">
         <div className="flex justify-center h-full items-center my-10 sm:my-0">
           <div className=" container max-w-xs">
             <form
-              onSubmit={this.onSubmit}
+              onSubmit={onSubmit}
               className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
             >
               <div className="mb-4">
@@ -63,7 +57,7 @@ class SignInForm extends Component {
                 <input
                   name="email"
                   value={email}
-                  onChange={this.onChange}
+                  onChange={e => onChange(setEmail,e)}
                   className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="username"
                   type="text"
@@ -77,7 +71,7 @@ class SignInForm extends Component {
                 <input
                   name="password"
                   value={password}
-                  onChange={this.onChange}
+                  onChange={e => onChange(setPassword,e)}
                   className="shadow appearance-none border border rounded w-full py-3 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                   id="password"
                   type="password"
@@ -111,7 +105,6 @@ class SignInForm extends Component {
       </section>
     );
   }
-}
 
 export default SignIn;
 
