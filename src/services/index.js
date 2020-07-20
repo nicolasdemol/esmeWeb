@@ -1,7 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
-import RpgService from "./RpgService"
+import RpgService from "./rpgService"
 import AuthService from "./AuthService"
 
 //* Config Firebase 
