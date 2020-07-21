@@ -19,7 +19,6 @@ const Form = () => {
     rpgService.getActions().then((response) => {
       setAction(response);
     });
-    rpgService.getContributions()
     return ()=>{
       setAction(null)
     }
