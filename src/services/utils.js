@@ -4,7 +4,7 @@ export async function getCollection(db,collection){
 }
 
 export function mapData(qs){
-  return qs.docs.map(doc => doc.data())
+  return qs.docs.map(doc => Object.assign(doc.data(),{id:doc.id}))
 }
 
 export function mapId(qs){

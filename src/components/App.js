@@ -14,7 +14,7 @@ import Account from './Account';
 import Admin from './Admin';
 
 import * as ROUTES from '../constants/routes';
-import { authService } from '../services';
+import { authService, rpgService } from '../services';
 
 
 
