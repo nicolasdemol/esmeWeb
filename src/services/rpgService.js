@@ -2,6 +2,7 @@ import { getCollection, mapData } from './utils';
 import { firestore } from 'firebase';
 
 export default class rpgService {
+
   constructor(db) {
     this.db = db;
   }
@@ -31,5 +32,14 @@ export default class rpgService {
       });
     console.log(res);
     return res;
+  }
+
+  async postAction({ nom, description, points }){
+      const res = this.db.collection("actions").add({
+          nom: nom,
+          description: description,
+          points: points
+      })
+      return res;
   }
 }
