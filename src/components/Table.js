@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import avatar from '../assets/images/avatar.png';
+import ContentLoader from 'react-content-loader';
 
 const Table = () => {
   const [select, setSelect] = useState('classement');
   return (
     <div>
       <Filter setSelect={setSelect} />
-      {select === 'classement' ? <LeaderBoard /> : <Tabs />}
+      {select === 'classement' ? <LeaderBoard /> : <MyLoader />}
     </div>
   );
 };
@@ -500,5 +501,26 @@ const Tabs = () => {
     </section>
   );
 };
+
+const MyLoader = (props) => (
+  <section className="container mx-auto px-0 sm:px-8">
+    <ContentLoader
+      className="w-full"
+      speed={2}
+      backgroundColor="#eee"
+      foregroundColor="#ccc"
+      {...props}
+    >
+      <circle cx="10" cy="20" r="8" />
+      <rect x="25" y="15" rx="5" ry="5" width="350" height="10" />
+      <circle cx="10" cy="50" r="8" />
+      <rect x="25" y="45" rx="5" ry="5" width="350" height="10" />
+      <circle cx="10" cy="80" r="8" />
+      <rect x="25" y="75" rx="5" ry="5" width="350" height="10" />
+      <circle cx="10" cy="110" r="8" />
+      <rect x="25" y="105" rx="5" ry="5" width="350" height="10" />
+    </ContentLoader>
+  </section>
+);
 
 export default Table;
