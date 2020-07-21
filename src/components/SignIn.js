@@ -8,7 +8,7 @@ const SignIn = () => (
     <SignInForm />
 );
 
-const SignInForm = props => {
+const SignInForm = (props) => {
   
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -39,7 +39,7 @@ const SignInForm = props => {
   }
 
     return (
-      <section className="w-full h-screen">
+      <section className="h-screen bg-gray-200">
         <div className="flex justify-center h-full items-center my-10 sm:my-0">
           <div className=" container max-w-xs">
             <form
