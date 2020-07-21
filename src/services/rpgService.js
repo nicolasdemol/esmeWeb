@@ -11,6 +11,11 @@ export default class rpgService {
   getCategories = () => getCollection(this.db, 'categories');
   getPointsRegistries = () => getCollection(this.db, 'points_registry');
 
+  /**
+   * Récupère la liste de contributions d'un utilisateur.
+   * @param {string} uuid Id de l'utilisateur recupéré via AuthUser.uid
+   * @returns {Promise<Array<Object>>} Un tableau d'objet contenant des contributions
+   */
   async getContributions(uuid) {
     const qs = await this.db
       .collection('points_registry')
