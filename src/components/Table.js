@@ -18,7 +18,7 @@ const Filter = (props) => {
   return (
     <div className="container sm:mx-auto mx-0">
       <div className="my-0 sm:my-2 flex mx-0 sm:mx-8">
-        <div className="flex mb-1 sm:mb-0 rounded shadow">
+        <div className="flex flex-grow sm:flex-grow-0 mb-1 sm:mb-0 rounded shadow">
           <div className="relative">
             <select
               onChange={handleChange}
@@ -37,7 +37,7 @@ const Filter = (props) => {
               </svg>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative flex-grow sm:flex-grow-0">
             <span className="h-full absolute inset-y-0 left-0 flex items-center pl-2">
               <svg
                 viewBox="0 0 24 24"
