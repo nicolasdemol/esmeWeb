@@ -1,6 +1,6 @@
 # EsmeWeb
 ## Introduction
-Le projet EsmeWeb à pour but d'être un site vitrine pour l'association Sudrihack.  
+Le projet EsmeWeb a pour but d'être un site vitrine pour l'association Sudrihack.  
 Ce site contiendra plusieurs modules propre à Sudrihack :
 - Une vitrine des projets de l'association
 - Un classement dynamique des membres de l'association, conformement au module RPG de l'association
