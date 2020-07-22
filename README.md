@@ -60,7 +60,7 @@ user@pc:~/Dev/MesProjets/esmeWeb $ yarn install
 user@pc:~/Dev/MesProjets $ cd esmeWeb
 user@pc:~/Dev/MesProjets/esmeWeb $ npm install
 ```
-En cas d'erreur, réferrez vous à cette documentation, si votre erreur n'y figure pas,
+En cas d'erreur, réferrez vous à cette [documentation](https://github.com/mindflix/esmeWeb/wiki/Troubleshooting), si votre erreur n'y figure pas,
 rédigez une issue [ici](https://github.com/mindflix/esmeWeb/issues/new).
 
 ## Lancer le serveur de developpement
@@ -73,7 +73,7 @@ user@pc:~/Dev/MesProjets/esmeWeb $ yarn start
 ```console
 user@pc:~/Dev/MesProjets/esmeWeb $ npm run start
 ```
-En cas d'erreur, réferrez vous à cette documentation, si votre erreur n'y figure pas,
+En cas d'erreur, réferrez vous à cette [documentation](https://github.com/mindflix/esmeWeb/wiki/Troubleshooting), si votre erreur n'y figure pas,
 rédigez une issue [ici](https://github.com/mindflix/esmeWeb/issues/new).
 
 Le serveur sera generalement accessible sur votre navigateur a cette adresse :
@@ -102,7 +102,7 @@ user@pc:~/Dev/MesProjets/esmeWeb $ yarn build
 ```console
 user@pc:~/Dev/MesProjets/esmeWeb $ npm run build
 ```
-En cas d'erreur, réferrez vous à cette documentation, si votre erreur n'y figure pas,
+En cas d'erreur, réferrez vous à cette [documentation](https://github.com/mindflix/esmeWeb/wiki/Troubleshooting), si votre erreur n'y figure pas,
 rédigez une issue [ici](https://github.com/mindflix/esmeWeb/issues/new).
 
 ## Fonctionnement général
