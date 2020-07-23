@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../assets/css/App.css';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 import Nav from './Nav';
 import Landing from './Landing';
