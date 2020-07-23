@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import "../assets/css/Nav.css";
-import { NavLink } from "react-router-dom";
-import * as ROUTES from "../constants/routes";
-import logo from "../assets/images/favicon.png";
-import SignOutButton from "./SignOut";
+import React, { useState, useEffect } from 'react';
+import '../assets/css/Nav.css';
+import { NavLink } from 'react-router-dom';
+import * as ROUTES from '../constants/routes';
+import logo from '../assets/images/favicon.png';
+import Menu from './Menu';
 
 const NavAuth = (props) => {
   const [isActive, setActive] = useState(false);
@@ -13,7 +13,7 @@ const NavAuth = (props) => {
     setActive(!isActive);
   };
   useEffect(() => {
-    document.addEventListener("scroll", () => {
+    document.addEventListener('scroll', () => {
       const Top = window.scrollY > 5;
       if (isTop !== Top) {
         setTop(!isTop);
@@ -24,8 +24,8 @@ const NavAuth = (props) => {
   return (
     <div
       className={`${
-        isTop ? "shadow-xl" : ""
-      } ${"transform transition duration-300 fixed w-full z-30 top-0 flex flex-wrap items-center justify-between p-2 sm:px-20 bg-blue-900 border border-blue-900"}`}
+        isTop ? 'shadow-xl' : ''
+      } ${'transform transition duration-300 fixed w-full z-30 top-0 flex flex-wrap items-center justify-between p-2 sm:px-20 bg-blue-900 border border-blue-900'}`}
     >
       <div className="flex flex-grow justify-around lg:justify-between items-center">
         <Logo />
@@ -39,8 +39,8 @@ const NavAuth = (props) => {
       </div>
       <div
         className={`${
-          isActive ? "h-20 md:h-auto" : "h-0 md:h-auto"
-        } ${"flex transition-all overflow-hidden lg:overflow-visible duration-150 linear flex-wrap lg:flex-grow-0 flex-grow justify-center"}`}
+          isActive ? 'h-50 md:h-auto' : 'h-0 md:h-auto'
+        } ${'flex transition-all overflow-hidden md:overflow-visible duration-150 linear flex-wrap md:flex-grow-0 flex-grow justify-center'}`}
       >
         <Links authUser={props.authUser} />
         {!props.authUser ? (
@@ -48,12 +48,9 @@ const NavAuth = (props) => {
             <Signbutton />
           </div>
         ) : (
-          <NavLink
-            to={ROUTES.LANDING}
-            className="flex justify-center items-center nav-links mx-4"
-          >
-            <SignOutButton />
-          </NavLink>
+          <div className="flex justify-center items-center nav-links mx-4">
+            <Menu />
+          </div>
         )}
       </div>
     </div>
@@ -98,10 +95,7 @@ const Links = (props) => {
             id="classement"
             className="block transition ease-in-out duration-300 focus:outline-none hover:text-teal-400"
           >
-            <NavLink
-              activeClassName="border-b-2 border-teal-400"
-              to={ROUTES.HOME}
-            >
+            <NavLink activeClassName="text-teal-400" to={ROUTES.HOME}>
               Classement
             </NavLink>
           </li>
@@ -112,7 +106,7 @@ const Links = (props) => {
           >
             <NavLink
               exact={true}
-              activeClassName="border-b-2 border-teal-400"
+              activeClassName="text-teal-400"
               to={ROUTES.LANDING}
             >
               Accueil
@@ -123,10 +117,7 @@ const Links = (props) => {
           id="projects"
           className="block transition ease-in-out duration-300 focus:outline-none hover:text-teal-400"
         >
-          <NavLink
-            activeClassName="border-b-2 border-teal-400"
-            to={ROUTES.PROJECTS}
-          >
+          <NavLink activeClassName="text-teal-400" to={ROUTES.PROJECTS}>
             Projets
           </NavLink>
         </li>
@@ -134,10 +125,7 @@ const Links = (props) => {
           id="partners"
           className="block transition ease-in-out duration-300 focus:outline-none hover:text-teal-400"
         >
-          <NavLink
-            activeClassName="border-b-2 border-teal-400"
-            to={ROUTES.PARTNERS}
-          >
+          <NavLink activeClassName="text-teal-400" to={ROUTES.PARTNERS}>
             Partenaires
           </NavLink>
         </li>
