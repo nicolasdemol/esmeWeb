@@ -3,13 +3,12 @@ import avatar from '../assets/images/avatar.png';
 import { rpgService } from '../services';
 import Loader from 'react-loader-spinner';
 
-
 const Home = () => {
   const [query, setQuery] = useState('Classement');
 
   return (
     <div className="h-screen pt-10 antialiased font-sans bg-gray-200 nav-links">
-      <Form titleValue={query}/>
+      <Form titleValue={query} />
       <Filter setSelect={setQuery} />
       {query === 'Classement' ? <LeaderBoard /> : <Tabs />}
     </div>
@@ -41,11 +40,16 @@ const Form = (props) => {
           <div className="flex items-center w-full space-x-4">
             <div className="flex-1 relative">
               {isLoading ? (
-                <div className="bg-white border border-gray-400 hover:border-gray-500 px-6 py-2 pr-8 rounded shadow focus:outline-none focus:shadow-outline">
-                  <Loader type="ThreeDots" color="#cbd5e0" height={20} width={40} />
+                <div className="bg-white border border-gray-400 hover:border-gray-500 px-6 py-2 pr-8 rounded shadow focus:outline-none ">
+                  <Loader
+                    type="ThreeDots"
+                    color="#cbd5e0"
+                    height={20}
+                    width={40}
+                  />
                 </div>
               ) : (
-                <select className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                <select className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none">
                   {action.map((value, index) => {
                     return <option key={index}>{value.nom}</option>;
                   })}
