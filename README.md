@@ -118,6 +118,6 @@ Un projet NodeJS standard, fonctionnant via ReactJs. React est une bibliothèque
 
 ## Screenshots du projet
 ### Module classement
-![Screen1](https://github.com/mindflix/esmeWeb/blob/feature/table/src/assets/images/review.png?raw=true)
+![Screen1](https://github.com/mindflix/esmeWeb/blob/master/src/assets/images/review.png?raw=true)
 ### Page d'accueil
-![Screen2](https://github.com/mindflix/esmeWeb/blob/feature/table/src/assets/images/review2.png?raw=true)
+![Screen2](https://github.com/mindflix/esmeWeb/blob/master/src/assets/images/review2.png?raw=true)
